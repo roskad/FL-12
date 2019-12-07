@@ -68,3 +68,86 @@
 	}
 	
 }
+
+.tm-nav-item-link:hover {
+	background-color: lightskyblue;
+	color: white;
+}
+
+.tm-banner {
+	background: linear-gradient(to right, lightskyblue, burlywood);
+}
+
+.tm-banner-inner {
+	background-color: #fff;
+}
+
+.tm-banner-text {
+	text-shadow: 3px 1px 2px #333;
+	animation: bannerTextAnimation 3s ease;
+}
+
+@keyframes bannerTextAnimation {
+
+	from {
+		position: relative;
+		left: 200px;
+		/*margin-left: 200px;*/
+	}
+
+	to {
+		position: relative;
+		left: 0;
+		/*margin-left: 0;*/
+	}
+}
+
+.flex-2-col {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.flex-2-col h2 {
+	text-align: center;
+}
+
+.tm-section-description {
+	text-indent: 25px;
+}
+
+.box-bg:hover {
+	background-color: lightgrey;
+}
+
+h2.tm-section-title:hover {
+	font-style: italic;
+	font-weight: 400;
+}
+
+.heading h2 {
+	color: lightskyblue;
+	text-align: center;
+}
+
+.heading ol {
+	list-style: lower-alpha;
+}
+
+.heading ol li:hover::before {
+	content: '>';
+	font-weight: bold;
+}
+
+.heading ol li > a.text::after {
+	content: 'New';
+	color: red;
+	display: inline-block;
+	position: relative;
+	top: -8px;
+    font-variant: small-caps;
+    font-size: 12px;
+    font-weight: 600;
+}
