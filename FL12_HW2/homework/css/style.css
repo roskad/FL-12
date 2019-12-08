@@ -1,3 +1,141 @@
+.tm-nav-item-link:hover {
+	background-color: lightskyblue;
+	color: white;
+}
+
+.tm-banner {
+	background: linear-gradient(to right, lightskyblue, burlywood);
+}
+
+.tm-banner-inner {
+	background-color: #fff;
+}
+
+.tm-banner-text {
+	text-shadow: 4px 5px 3px #333;
+	animation: bannerTextAnimation 3s ease;
+}
+
+@keyframes bannerTextAnimation {
+
+	from {
+		position: relative;
+		left: 200px;
+	}
+
+	to {
+		position: relative;
+		left: 0;
+	}
+}
+
+.flex-2-col {
+	display: flex;
+	align-items: center;
+}
+
+.flex-2-col h2 {
+	text-align: center;
+}
+
+.box-bg:hover {
+	background-color: lightgrey;
+}
+
+li.box.box-bg h2.tm-section-title:hover {
+	font-style: italic;
+	font-weight: 400;
+	color: lightskyblue;
+}
+
+.heading h2 {
+	color: lightskyblue;
+	text-align: center;
+}
+
+.heading ol {
+	list-style: lower-alpha;
+}
+
+.heading ol li:hover::before {
+	content: '>';
+	font-weight: bold;
+}
+
+.heading ol li > a.text::after {
+	content: 'New';
+	color: red;
+	display: inline-block;
+	position: relative;
+	top: -8px;
+	font-variant: small-caps;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.blocks > .tm-team-description-container p:last-child {
+	word-spacing: 10px;
+	font-style: italic;
+	letter-spacing: 5px;
+}
+
+ul.boxes.gallery-container li.box.box-work:nth-child(odd) {
+	background-color: lightskyblue;
+	color: white;
+}
+
+ul.boxes.gallery-container li.box.box-work {
+	padding: 10px;
+}
+
+ul.boxes.gallery-container li.box.box-work p:first-letter {
+	font-weight: 600;
+}
+
+ul.boxes.gallery-container li.box.box-work p {
+	font-style: italic;
+}
+
+p.tm-section-description {
+	text-indent: 25px;
+	line-height: 30px;
+}
+
+form.contact-form input.form-control {
+	border: none;
+	border-bottom: 1px solid lightskyblue; 
+}
+
+form.contact-form input.form-control:focus {
+	background-color: lightskyblue;
+}
+
+form.contact-form textarea.form-control {
+	border: 1px solid lightskyblue;
+	background: url(../img/email-icon.png) no-repeat 99% 95%;
+	background-size: 3%;
+}
+
+form.contact-form button {
+	float: right;
+	background-color: white;
+	border-color: lightskyblue;
+	color: lightskyblue;
+	padding: 15px 25px
+}
+
+.tm-sidebar, .tm-main-content > div, .tm-main-content section {
+	box-shadow: rgba(61, 55, 61, 0.7) 0 0 10px;
+}
+
+.tm-main-content section::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 50px solid lightskyblue;
+	border-right: 50px solid transparent;
+}
+
 @media print {
 	
 	.tm-team-description-container {
@@ -55,10 +193,18 @@
 		text-align: right;
 	}
 
-	.blocks > .tm-team-description-container p:last-child {
-		word-spacing: 10px;
-		font-style: italic;
-		letter-spacing: 6px;
+	.heading ol li:hover::before, .tm-main-content section::before {
+		content: '';
+		display: none;
+	}
+
+	.heading ol li > a.text::after {
+		content: '';
+		display: none;
+	}
+
+	.heading ol li > a.text{
+		text-decoration: none;
 	}
 
 	#tmCarousel p, .blocks > .tm-team-description-container p:first-of-type {
@@ -66,88 +212,13 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
-}
 
-.tm-nav-item-link:hover {
-	background-color: lightskyblue;
-	color: white;
-}
-
-.tm-banner {
-	background: linear-gradient(to right, lightskyblue, burlywood);
-}
-
-.tm-banner-inner {
-	background-color: #fff;
-}
-
-.tm-banner-text {
-	text-shadow: 3px 1px 2px #333;
-	animation: bannerTextAnimation 3s ease;
-}
-
-@keyframes bannerTextAnimation {
-
-	from {
-		position: relative;
-		left: 200px;
-		/*margin-left: 200px;*/
+	p.tm-section-description {
+		text-indent: 0;
+		line-height: normal;
 	}
 
-	to {
-		position: relative;
-		left: 0;
-		/*margin-left: 0;*/
+	footer {
+		margin-top: 15px;
 	}
-}
-
-.flex-2-col {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-}
-
-.flex-2-col h2 {
-	text-align: center;
-}
-
-.tm-section-description {
-	text-indent: 25px;
-}
-
-.box-bg:hover {
-	background-color: lightgrey;
-}
-
-h2.tm-section-title:hover {
-	font-style: italic;
-	font-weight: 400;
-}
-
-.heading h2 {
-	color: lightskyblue;
-	text-align: center;
-}
-
-.heading ol {
-	list-style: lower-alpha;
-}
-
-.heading ol li:hover::before {
-	content: '>';
-	font-weight: bold;
-}
-
-.heading ol li > a.text::after {
-	content: 'New';
-	color: red;
-	display: inline-block;
-	position: relative;
-	top: -8px;
-    font-variant: small-caps;
-    font-size: 12px;
-    font-weight: 600;
 }
