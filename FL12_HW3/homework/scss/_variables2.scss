@@ -1,0 +1,25 @@
+$SSPro: 'Source Sans Pro', sans-serif;
+$Hind: 'Hind', sans-serif;
+$Fresca: 'Fresca', sans-serif;
+
+$headerBgImage: '../img/m-h-night.jpg';
+$headerHeadingColor: #fff;
+$headerLogoFont: 'Fresca', sans-serif;
+$headerLogoText: 'Fresca', sans-serif;
+$lhForLogo: 15px;
+$headerButton: #e3ac00;
+$undertextBg: #ff4e33;
+$fTextWidth: 335px;
+$textColor: #c0c3ce;
+
+$uiColors: (
+	bgColor: #21232e,
+	blocColor: #3b3f50,
+	gradient: linear-gradient(to right, #dda206, #953150)
+);
+
+@function bgColor($key) {
+  @if map-has-key($uiColors, $key) {
+    @return map-get($uiColors, $key);
+  }
+}

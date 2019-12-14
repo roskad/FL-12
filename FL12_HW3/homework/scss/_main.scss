@@ -1,0 +1,268 @@
+@mixin joinButton {
+	background-color: $headerButton;
+	padding: 15px 42px;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+@mixin links($linkColor: white) {
+	font-family: $SSPro;
+	color: $linkColor;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: bgColor(bgColor);
+}
+
+header.header {
+	height: 720px;
+	width: 100%;
+	background: url($headerBgImage) no-repeat center;
+	background-size: cover;
+	border-bottom-right-radius: 800px 280px;
+	color: $headerHeadingColor;
+
+	.header-wrap {
+		height: inherit;
+		width: 650px;
+		margin-left: 192px;
+		font-family: $SSPro;
+
+		.landing-logo {
+			padding-top: 20px;
+			display: flex;
+			flex-direction: row;
+
+			p {
+				font-family: $headerLogoFont;
+				font-size: 23px;
+				text-align: center;
+				font-weight: 600;
+				margin: 0;
+				padding-left: 15px;
+
+				span {
+					display: block;
+					font-size: 10px;
+					line-height: $lhForLogo;
+				}
+			}
+		}
+
+		p.header_heading {
+			font-weight: 700;
+			font-size: 72px;
+			line-height: 72px;
+			margin-bottom: 0;
+			position: relative;
+			z-index: 1;
+		}
+
+		p.header_text {
+			white-space: pre-line;
+			line-height: 23px;
+			font-family: $headerLogoText;
+			position: relative;
+			margin-top: 37px;
+			word-spacing: 2px;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 300px;
+				height: 50px;
+				background-color: $undertextBg;
+				position: absolute;
+				top: -87px;
+				z-index: 0;
+			}
+		}
+
+		div:last-of-type {
+			margin-top: 65px;
+
+			button {
+				@include joinButton;	
+			}
+
+			a {
+				@include links;
+				padding-left: 150px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+main.section {
+
+	p.section_text {
+		text-align: center;
+		font-size: 42px;
+		font-family: $SSPro;
+		font-weight: 600;
+		margin-top: 36px;
+		margin-bottom: 38px;
+		color: $headerHeadingColor;
+	}
+
+	.section_card_wrap {
+		width: 1115px;
+		margin: 0 auto;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 190px;
+			height: 50px;
+			background-color: $undertextBg;
+			position: absolute;
+			top: -95px;
+			z-index: -1;
+			right: 360px;
+
+		}
+
+		.section_card {
+			background-color: bgColor(blocColor);
+			border-radius: 5px;
+			display: flex;
+			flex-direction: row;
+			padding: 20px;
+			margin-bottom: 25px;
+			text-align: center;
+
+			img.section_card_img {
+				width: 100%;
+			}
+
+			.section_card_right_container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				p.section_card_heading {
+					color: #fff;
+					font-family: $SSPro;
+					font-size: 24px;
+					font-weight: 600;
+				}
+
+				p.section_card_text {
+					color: $textColor;
+					text-align: justify;
+					padding: 0px 85px;
+					font-family: $headerLogoFont;
+					line-height: 25px;
+				}
+
+				a.section_link {
+					@include links($textColor);
+				}
+			}
+
+		}
+	}
+
+	.section_banner {
+		background-image: bgColor(gradient);
+		width: 1196px;
+		margin: 0 auto;
+		border-radius: 5px;
+		padding: 27px 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		position: relative;
+		bottom: -115px;
+
+		p.section_banner_heading {
+			font-family: $SSPro;
+			font-size: 30px;
+			font-weight: 700;
+			margin: 0;
+			color: $headerHeadingColor;
+			position: relative;
+			z-index: 1;
+		}
+
+		p.section_banner_text {
+			font-family: $headerLogoText;
+			color: $textColor;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 64px;
+				height: 50px;
+				background-color: $undertextBg;
+				position: absolute;
+				top: 12px;
+				z-index: 0;
+				left: 281px;
+
+			}
+		}
+
+		button {
+			@include joinButton;
+			height: fit-content;
+			align-self: center;	
+		}
+	}
+}
+
+footer.footer {
+	margin-top: 40px;
+	height: 240px;
+	background-color: bgColor(blocColor);
+
+	.footer-wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 7% 170px 0 192px;
+		color: $textColor;
+
+		.footer_logo {
+			display: flex;
+			flex-direction: row;
+
+			img {
+				align-self: center;
+			}
+
+			p {
+				font-family: $headerLogoFont;
+				font-size: 23px;
+				text-align: center;
+				font-weight: 600;
+				margin: 0;
+				padding-left: 15px;
+
+				span {
+					display: block;
+					font-size: 10px;
+					line-height: $lhForLogo;
+				}
+			}
+		}
+
+		p.footer_text {
+			margin: 0;
+			width: $fTextWidth;
+			@extend .footer-cr;
+		}
+
+		.footer-cr {
+			align-self: center;
+			font-family: $headerLogoText;
+		}
+	}	
+}

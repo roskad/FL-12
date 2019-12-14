@@ -1,0 +1,25 @@
+$SSPro: 'Source Sans Pro', sans-serif;
+$Hind: 'Hind', sans-serif;
+$Fresca: 'Fresca', sans-serif;
+
+$headerBgImage: '../img/m-h-day.jpg';
+$headerHeadingColor: #2c2f3c;
+$headerLogoFont: 'Hind', sans-serif;
+$headerLogoText: 'Source Sans Pro', sans-serif;
+$lhForLogo: 5px;
+$headerButton: #699900;
+$undertextBg: #14a0c7;
+$fTextWidth: 325px;
+$textColor: #c0c3ce;
+
+$uiColors: (
+	bgColor: #fff,
+	blocColor: #21232e,
+	gradient: linear-gradient(to right, #65950d, #2e5cd6)
+);
+
+@function bgColor($key) {
+  @if map-has-key($uiColors, $key) {
+    @return map-get($uiColors, $key);
+  }
+}
