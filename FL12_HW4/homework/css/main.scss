@@ -1,0 +1,140 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+
+	.mainMenu {
+		height: 85px;
+		background-color: #fff;
+		color: #777;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		z-index: 1;
+
+		.logoText {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 20px;
+			letter-spacing: 4px;
+		}
+
+		ul{
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+				list-style-type: none;
+				font-size: 19px;
+				padding-right: 42px;
+
+				&:last-of-type {
+					margin-right: 222px;
+					padding-right: 0;
+				}
+
+				a {
+					text-decoration: none;
+					color: #777;
+
+					&:hover {
+						color: #bfba55;
+					}
+				}
+			} 
+		}
+	}
+
+	.hello {
+		height: calc(100vh - 85px);
+		background: url('../img/home-bg.jpg') no-repeat center center;
+		background-size: cover;
+		margin-top: 85px;
+		// filter: brightness(50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			width: 100%;
+			/* filter: brightness(0.5); */
+			background-color: rgba(0,0,0,0.5);
+			z-index: 0;
+		}
+
+		.helloHeaderText {
+			font-size: 70px;
+			margin: 0;
+			position: relative;
+		}
+
+		.helloText {
+			position: relative;
+			color: #bfba55;
+			letter-spacing: 2px;
+		}
+
+		.discover {
+			position: relative;
+			text-transform: uppercase;
+			border: 0;
+			border-radius: 40px;
+			padding: 15px 23px;
+			background-color: #fff;
+			margin-top: 35px;
+		}
+	}
+}
+
+main {
+	margin-top: 110px;
+	width: 100%;
+
+	.post {
+		width: 900px;
+		margin: 0 auto;
+
+		img {
+			max-width: 900px; 
+		}
+
+		.postHeaderText {
+			margin-top: 45px;
+			margin-bottom: 0;
+			font-size: 32px;
+		}
+
+		.postInfo {
+			padding-left: 0;
+			width: 36%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			li {
+				list-style-type: none;
+				display: inline-block;
+
+				img {
+					width: 42px;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
