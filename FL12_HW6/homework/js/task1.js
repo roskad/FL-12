@@ -2,12 +2,12 @@ alert(
     'Hi! Please enter 3 numbers (a, b, c) for quadratic equation \n (a*x^2 + b*x + c = 0)'
 );
 
-var a = parseFloat(prompt('Enter number a'));
-var b = parseFloat(prompt('Enter number b'));
-var c = parseFloat(prompt('Enter number c'));
-var d;
-var x1;
-var x2;
+let a = parseFloat(prompt('Enter number a')),
+    b = parseFloat(prompt('Enter number b')),
+    c = parseFloat(prompt('Enter number c'));
+let d;
+let x1;
+let x2;
 
 if (a === 0 || a === '' || isNaN(a)) {
     console.log('Invalid input data');
