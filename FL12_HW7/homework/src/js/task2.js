@@ -15,8 +15,6 @@ if (isPlaying === false) {
   while (isPlaying === true) {
     casNumber = Math.floor(Math.random() * (maxCasNum - minCasNum + 1)) + minCasNum;
     for (let i = 3; i >= attempt; i--) {
-      console.log(i);
-      console.log(casNumber);
       if (i === 2) {
         possiblePrize = possiblePrize / prizeReduce;
       }
@@ -59,8 +57,6 @@ Possible prize on current attempt: `+ possiblePrize));
         casNumber = Math.floor(Math.random() * (maxCasNum - minCasNum + 1)) + minCasNum;
         possiblePrize = possiblePrize * 2;
         for (let i = 3; i >= attempt; i--) {
-          console.log('2round ' + i);
-          console.log('2round ' + casNumber);
           if (i === 2) {
             possiblePrize = possiblePrize / prizeReduce;
           }
