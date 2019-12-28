@@ -1,5 +1,10 @@
 function countNumber(something) {
-  let number = something.replace(/[^0-9]/g, '');
+  let number = '';
+  for (let i in something) {
+    if (parseInt(something[i])) {
+      number = number + something[i];
+    }
+  }
   let count = {};
   for (let i = 0; i < number.length; i++) {
     let a = number[i];
