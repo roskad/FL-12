@@ -58,3 +58,42 @@ function flipOver(string) {
   return backwardString;
 }
 console.log(flipOver('hey world'));
+
+//Task 6
+function makeListFromRange(arr) {
+  let newArr = [];
+  for (let i = arr[0]; i <= arr[1]; i++) {
+    newArr.push(i);
+  }
+  return newArr;
+}
+
+console.log(makeListFromRange([2, 7]));
+
+//Task 7
+let actors = [
+  { name: 'tommy', age: 36 },
+  { name: 'lee', age: 28 }
+];
+function getArrayOfKeys(arr, key) {
+  let newArr = [];
+  executeforEach(arr, function (element) {
+    newArr.push(element[key])
+  });
+  return newArr;
+}
+console.log(getArrayOfKeys(actors, 'name'));
+
+//Task 8
+function substitute(arr) {
+  let newArr = [];
+  mapArray(arr, function (element) {
+    if (element < 30) {
+      newArr.push('*');
+    } else {
+      newArr.push(element);
+    }
+  });
+  return newArr;
+}
+console.log(substitute([58, 14, 48, 2, 31, 29]));
